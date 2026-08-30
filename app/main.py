@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from app.config import settings
 from app.api.health_routes import router as health_router
+from app.api.audit_routes import router as audit_router
 
 def create_app() -> FastAPI:
     app = FastAPI(
@@ -11,6 +12,7 @@ def create_app() -> FastAPI:
     )
     
     app.include_router(health_router, prefix=settings.api_prefix)
+    app.include_router(audit_router, prefix=settings.api_prefix)
     
     return app
 

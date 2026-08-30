@@ -4,7 +4,7 @@ from app.models.audit_event import AuditEvent
 from app.repositories.audit_repository import AuditRepository
 from app.utils.hashing import calculate_hash, GENESIS_HASH
 from app.utils.canonical_json import to_canonical_json
-from app.schemas.audit import AuditEventCreate
+from app.schemas.audit import AuditEventCreate, AuditEventQuery
 
 class AuditService:
     def __init__(self, repository: AuditRepository):
@@ -38,3 +38,9 @@ class AuditService:
             current_hash=current_hash
         )
         return self.repository.create(event)
+
+    def get_event(self, event_id: int) -> Optional[AuditEvent]:
+        return self.repository.get_by_id(event_id)
+
+    def get_events(self, query: AuditEventQuery) -> list[AuditEvent]:
+        return self.repository.get_filtered(query)
