@@ -44,3 +44,73 @@ class AuditService:
 
     def get_events(self, query: AuditEventQuery) -> list[AuditEvent]:
         return self.repository.get_filtered(query)
+
+    def archive_record(self, event_id: int) -> bool:
+        event = self.repository.get_by_id(event_id)
+        if not event or event.is_archived:
+            return False
+            
+        event.payload = None
+        event.is_archived = 1
+        self.repository.session.commit()
+        return True
+
+    def redact_record(self, event_id: int, field_keys: list[str]) -> bool:
+        import json
+        import hashlib
+        
+        event = self.repository.get_by_id(event_id)
+        if not event or event.is_archived:
+            return False
+            
+        payload = json.loads(event.payload)
+        redacted = json.loads(event.redacted_fields) if event.redacted_fields else {}
+        modified = False
+        
+        for key in field_keys:
+            if key in payload:
+                val_str = str(payload[key])
+                # Salted hash (in a real app, use a secret salt. For this prototype, we just hash the value for demonstration)
+                redacted[key] = hashlib.sha256(val_str.encode()).hexdigest()
+                payload[key] = "<REDACTED>"
+                modified = True
+                
+        if modified:
+            event.payload = json.dumps(payload, separators=(',', ':'), sort_keys=True)
+            event.redacted_fields = json.dumps(redacted, separators=(',', ':'), sort_keys=True)
+            self.repository.session.commit()
+            return True
+            
+        return False
+        
+    def export_records(self, actor_id: str = None, resource_id: str = None) -> dict:
+        query = AuditEventQuery(actorId=actor_id, resourceId=resource_id, pageSize=100)
+        events = self.repository.get_filtered(query)
+        
+        records = []
+        for e in events:
+            records.append({
+                "id": e.id,
+                "event_type": e.event_type,
+                "actor_id": e.actor_id,
+                "resource_type": e.resource_type,
+                "resource_id": e.resource_id,
+                "payload": e.payload,
+                "timestamp": e.timestamp.isoformat(),
+                "previous_hash": e.previous_hash,
+                "current_hash": e.current_hash,
+                "is_archived": bool(e.is_archived),
+                "redacted_fields": e.redacted_fields
+            })
+            
+        return {
+            "metadata": {
+                "exported_at": datetime.now(timezone.utc).isoformat(),
+                "filters": {"actor_id": actor_id, "resource_id": resource_id}
+            },
+            "records": records,
+            "chain_metadata": {
+                "record_count": len(records),
+                "verification_instructions": "Verify each record's current_hash matches expected, and sequence is intact where contiguous."
+            }
+        }

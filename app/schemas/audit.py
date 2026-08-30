@@ -35,6 +35,8 @@ class AuditEventResponse(BaseModel):
     timestamp: datetime
     previousHash: str
     currentHash: str
+    isArchived: bool = False
+    redactedFields: Optional[Dict[str, str]] = None
 
 class AuditEventQuery(BaseModel):
     actorId: Optional[str] = Field(None, max_length=128)

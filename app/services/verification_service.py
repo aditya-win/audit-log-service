@@ -23,27 +23,29 @@ class VerificationService:
                     )
                 )
 
-            # 2. Check current hash based on content
-            expected_current_hash = calculate_hash(
-                event_type=record.event_type,
-                actor_id=record.actor_id,
-                resource_type=record.resource_type,
-                resource_id=record.resource_id,
-                payload_str=record.payload,
-                timestamp=record.timestamp,
-                previous_hash=record.previous_hash
-            )
-
-            if record.current_hash != expected_current_hash:
-                return VerificationResponse(
-                    status=ChainStatus.BROKEN,
-                    error=VerificationError(
-                        recordId=record.id,
-                        violationType=ViolationType.TAMPERED_PAYLOAD,
-                        expectedHash=expected_current_hash,
-                        actualHash=record.current_hash
-                    )
+            # 2. Check current hash based on content IF NOT ARCHIVED
+            if not record.is_archived:
+                expected_current_hash = calculate_hash(
+                    event_type=record.event_type,
+                    actor_id=record.actor_id,
+                    resource_type=record.resource_type,
+                    resource_id=record.resource_id,
+                    payload_str=record.payload,
+                    timestamp=record.timestamp,
+                    previous_hash=record.previous_hash,
+                    redacted_fields=record.redacted_fields
                 )
+
+                if record.current_hash != expected_current_hash:
+                    return VerificationResponse(
+                        status=ChainStatus.BROKEN,
+                        error=VerificationError(
+                            recordId=record.id,
+                            violationType=ViolationType.TAMPERED_PAYLOAD,
+                            expectedHash=expected_current_hash,
+                            actualHash=record.current_hash
+                        )
+                    )
 
             expected_previous_hash = record.current_hash
 
