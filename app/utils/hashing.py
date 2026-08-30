@@ -30,6 +30,12 @@ def compute_payload_commitment(payload_str: str, redacted_fields_str: str = None
 def calculate_hash(event_type: str, actor_id: str, resource_type: str, resource_id: str, payload_str: str, timestamp: datetime, previous_hash: str, redacted_fields: str = None) -> str:
     """
     Calculate the SHA-256 hash of an audit event deterministically.
+    
+    SECURITY LIMITATION:
+    - Hash Collisions: While SHA-256 is currently cryptographically secure against collision attacks, 
+      advances in cryptanalysis could theoretically weaken it over decades.
+    - Quantum Vulnerability: SHA-256 is not theoretically immune to Grover's algorithm on a sufficiently large 
+      quantum computer, though its 256-bit output currently maintains adequate security margins (effective 128-bit).
     """
     if timestamp.tzinfo is None:
         timestamp = timestamp.replace(tzinfo=timezone.utc)

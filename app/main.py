@@ -11,6 +11,12 @@ def create_app() -> FastAPI:
         redoc_url=f"{settings.api_prefix}/redoc",
     )
     
+    # SECURITY LIMITATION: 
+    # This application currently lacks Authentication and Authorization (e.g., JWT, OAuth2).
+    # In production, all routes should be protected by RBAC, ensuring only authorized services can append,
+    # and only authorized compliance officers can trigger verifications or exports.
+    # Rate limiting should also be applied to prevent DoS attacks.
+
     app.include_router(health_router, prefix=settings.api_prefix)
     app.include_router(audit_router, prefix=settings.api_prefix)
     
