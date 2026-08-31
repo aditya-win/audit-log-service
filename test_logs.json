@@ -1,0 +1,548 @@
+[
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-99",
+    "resourceType": "system",
+    "resourceId": "res-209",
+    "payload": {
+      "status": "success",
+      "index": 0
+    },
+    "timestamp": "2024-12-31T19:27:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-49",
+    "resourceType": "system",
+    "resourceId": "res-275",
+    "payload": {
+      "status": "success",
+      "index": 1
+    },
+    "timestamp": "2024-12-31T14:24:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-21",
+    "resourceType": "system",
+    "resourceId": "res-70",
+    "payload": {
+      "status": "success",
+      "index": 2
+    },
+    "timestamp": "2024-12-31T18:14:00+00:00"
+  },
+  {
+    "eventType": "RECORD_UPDATED",
+    "actorId": "actor-21",
+    "resourceType": "system",
+    "resourceId": "res-1",
+    "payload": {
+      "status": "success",
+      "index": 3
+    },
+    "timestamp": "2024-12-31T08:32:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-77",
+    "resourceType": "system",
+    "resourceId": "res-194",
+    "payload": {
+      "status": "success",
+      "index": 4
+    },
+    "timestamp": "2024-12-31T22:48:00+00:00"
+  },
+  {
+    "eventType": "DATA_ACCESS",
+    "actorId": "actor-14",
+    "resourceType": "system",
+    "resourceId": "res-464",
+    "payload": {
+      "status": "success",
+      "index": 5
+    },
+    "timestamp": "2024-12-31T23:15:00+00:00"
+  },
+  {
+    "eventType": "RECORD_UPDATED",
+    "actorId": "actor-17",
+    "resourceType": "system",
+    "resourceId": "res-405",
+    "payload": {
+      "status": "success",
+      "index": 6
+    },
+    "timestamp": "2024-12-31T08:31:00+00:00"
+  },
+  {
+    "eventType": "DATA_ACCESS",
+    "actorId": "actor-74",
+    "resourceType": "system",
+    "resourceId": "res-245",
+    "payload": {
+      "status": "success",
+      "index": 7
+    },
+    "timestamp": "2024-12-31T19:28:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-99",
+    "resourceType": "system",
+    "resourceId": "res-157",
+    "payload": {
+      "status": "success",
+      "index": 8
+    },
+    "timestamp": "2024-12-31T18:08:00+00:00"
+  },
+  {
+    "eventType": "DATA_ACCESS",
+    "actorId": "actor-27",
+    "resourceType": "system",
+    "resourceId": "res-421",
+    "payload": {
+      "status": "success",
+      "index": 9
+    },
+    "timestamp": "2024-12-31T13:36:00+00:00"
+  },
+  {
+    "eventType": "PERMISSION_GRANTED",
+    "actorId": "actor-2",
+    "resourceType": "system",
+    "resourceId": "res-204",
+    "payload": {
+      "status": "success",
+      "index": 10
+    },
+    "timestamp": "2024-12-31T08:45:00+00:00"
+  },
+  {
+    "eventType": "DATA_ACCESS",
+    "actorId": "actor-88",
+    "resourceType": "system",
+    "resourceId": "res-276",
+    "payload": {
+      "status": "success",
+      "index": 11
+    },
+    "timestamp": "2025-01-06T00:00:00+00:00"
+  },
+  {
+    "eventType": "DATA_ACCESS",
+    "actorId": "actor-67",
+    "resourceType": "system",
+    "resourceId": "res-343",
+    "payload": {
+      "data": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    "timestamp": "2024-12-31T16:50:00+00:00"
+  },
+  {
+    "eventType": "RECORD_UPDATED",
+    "actorId": "actor-93",
+    "resourceType": "system",
+    "resourceId": "res-420",
+    "payload": {
+      "status": "success",
+      "index": 13
+    },
+    "timestamp": "2024-12-31T22:35:00+00:00"
+  },
+  {
+    "eventType": "PERMISSION_GRANTED",
+    "actorId": "admin",
+    "resourceType": "system",
+    "resourceId": "res-172",
+    "payload": {
+      "reason": "bypass",
+      "risk": "high",
+      "ip": "10.0.0.99"
+    },
+    "timestamp": "2024-12-31T18:14:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-93",
+    "resourceType": "system",
+    "resourceId": "res-234",
+    "payload": {
+      "status": "success",
+      "index": 15
+    },
+    "timestamp": "2024-12-31T17:23:00+00:00"
+  },
+  {
+    "eventType": "PERMISSION_GRANTED",
+    "actorId": "actor-3",
+    "resourceType": "system",
+    "resourceId": "res-97",
+    "payload": {
+      "status": "success",
+      "index": 16
+    },
+    "timestamp": "2024-12-31T13:59:00+00:00"
+  },
+  {
+    "eventType": "PERMISSION_GRANTED",
+    "actorId": "actor-2",
+    "resourceType": "system",
+    "resourceId": "res-459",
+    "payload": {
+      "status": "success",
+      "index": 17
+    },
+    "timestamp": "2024-12-31T17:59:00+00:00"
+  },
+  {
+    "eventType": "PERMISSION_GRANTED",
+    "actorId": "admin",
+    "resourceType": "system",
+    "resourceId": "res-257",
+    "payload": {
+      "reason": "bypass",
+      "risk": "high",
+      "ip": "10.0.0.99"
+    },
+    "timestamp": "2024-12-31T11:38:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-82",
+    "resourceType": "system",
+    "resourceId": "res-148",
+    "payload": {},
+    "timestamp": "2024-12-31T15:33:00+00:00"
+  },
+  {
+    "eventType": "RECORD_UPDATED",
+    "actorId": "actor-20",
+    "resourceType": "system",
+    "resourceId": "res-275",
+    "payload": {
+      "status": "success",
+      "index": 20
+    },
+    "timestamp": "2024-12-31T16:24:00+00:00"
+  },
+  {
+    "eventType": "DATA_ACCESS",
+    "actorId": "actor-6",
+    "resourceType": "system",
+    "resourceId": "res-6",
+    "payload": {
+      "status": "success",
+      "index": 21
+    },
+    "timestamp": "2024-12-31T21:42:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-33",
+    "resourceType": "system",
+    "resourceId": "res-410",
+    "payload": {
+      "status": "success",
+      "index": 22
+    },
+    "timestamp": "2024-12-31T17:59:00+00:00"
+  },
+  {
+    "eventType": "DATA_ACCESS",
+    "actorId": "actor-82",
+    "resourceType": "system",
+    "resourceId": "res-216",
+    "payload": {
+      "status": "success",
+      "index": 23
+    },
+    "timestamp": "2024-12-31T23:59:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-66",
+    "resourceType": "system",
+    "resourceId": "res-182",
+    "payload": {
+      "status": "success",
+      "index": 24
+    },
+    "timestamp": "2024-12-31T11:55:00+00:00"
+  },
+  {
+    "eventType": "DATA_ACCESS",
+    "actorId": "actor-2",
+    "resourceType": "system",
+    "resourceId": "res-408",
+    "payload": {
+      "status": "success",
+      "index": 25
+    },
+    "timestamp": "2024-12-31T14:51:00+00:00"
+  },
+  {
+    "eventType": "DATA_ACCESS",
+    "actorId": "actor-4",
+    "resourceType": "system",
+    "resourceId": "res-166",
+    "payload": {
+      "status": "success",
+      "index": 26
+    },
+    "timestamp": "2024-12-31T19:31:00+00:00"
+  },
+  {
+    "eventType": "PERMISSION_GRANTED",
+    "actorId": "admin",
+    "resourceType": "system",
+    "resourceId": "res-288",
+    "payload": {
+      "reason": "bypass",
+      "risk": "high",
+      "ip": "10.0.0.99"
+    },
+    "timestamp": "2024-12-31T18:17:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-82",
+    "resourceType": "system",
+    "resourceId": "res-326",
+    "payload": {
+      "status": "success",
+      "index": 28
+    },
+    "timestamp": "2024-12-31T07:27:00+00:00"
+  },
+  {
+    "eventType": "DATA_ACCESS",
+    "actorId": "actor-9",
+    "resourceType": "system",
+    "resourceId": "res-368",
+    "payload": {
+      "status": "success",
+      "index": 29
+    },
+    "timestamp": "2024-12-31T09:09:00+00:00"
+  },
+  {
+    "eventType": "PERMISSION_GRANTED",
+    "actorId": "actor-86",
+    "resourceType": "system",
+    "resourceId": "res-121",
+    "payload": {
+      "status": "success",
+      "index": 30
+    },
+    "timestamp": "2024-12-31T11:18:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-98",
+    "resourceType": "system",
+    "resourceId": "res-266",
+    "payload": {
+      "status": "success",
+      "index": 31
+    },
+    "timestamp": "2024-12-31T17:23:00+00:00"
+  },
+  {
+    "eventType": "RECORD_UPDATED",
+    "actorId": "actor-84",
+    "resourceType": "system",
+    "resourceId": "res-396",
+    "payload": {
+      "status": "success",
+      "index": 32
+    },
+    "timestamp": "2024-12-31T08:22:00+00:00"
+  },
+  {
+    "eventType": "DATA_ACCESS",
+    "actorId": "actor-48",
+    "resourceType": "system",
+    "resourceId": "res-65",
+    "payload": {
+      "status": "success",
+      "index": 33
+    },
+    "timestamp": "2024-12-31T14:52:00+00:00"
+  },
+  {
+    "eventType": "PERMISSION_GRANTED",
+    "actorId": "admin",
+    "resourceType": "system",
+    "resourceId": "res-86",
+    "payload": {
+      "reason": "bypass",
+      "risk": "high",
+      "ip": "10.0.0.99"
+    },
+    "timestamp": "2024-12-31T10:18:00+00:00"
+  },
+  {
+    "eventType": "DATA_ACCESS",
+    "actorId": "actor-8",
+    "resourceType": "system",
+    "resourceId": "res-380",
+    "payload": {
+      "status": "success",
+      "index": 35
+    },
+    "timestamp": "2024-12-31T21:40:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-45",
+    "resourceType": "system",
+    "resourceId": "res-231",
+    "payload": {
+      "status": "success",
+      "index": 36
+    },
+    "timestamp": "2024-12-31T09:08:00+00:00"
+  },
+  {
+    "eventType": "DATA_ACCESS",
+    "resourceType": "system",
+    "resourceId": "res-220",
+    "payload": {
+      "status": "success",
+      "index": 37
+    },
+    "timestamp": "2024-12-31T10:29:00+00:00"
+  },
+  {
+    "eventType": "PERMISSION_GRANTED",
+    "actorId": "actor-67",
+    "resourceType": "system",
+    "resourceId": "res-264",
+    "payload": {
+      "status": "success",
+      "index": 38
+    },
+    "timestamp": "2024-12-31T14:30:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-70",
+    "resourceType": "system",
+    "resourceId": "res-372",
+    "payload": {
+      "status": "success",
+      "index": 39
+    },
+    "timestamp": "2024-12-31T17:42:00+00:00"
+  },
+  {
+    "eventType": "PERMISSION_GRANTED",
+    "actorId": "actor-12",
+    "resourceType": "system",
+    "resourceId": "res-140",
+    "payload": {
+      "status": "success",
+      "index": 40
+    },
+    "timestamp": "2024-12-31T08:07:00+00:00"
+  },
+  {
+    "eventType": "RECORD_UPDATED",
+    "actorId": "actor-42",
+    "resourceType": "system",
+    "resourceId": "res-136",
+    "payload": {
+      "status": "success",
+      "index": 41
+    },
+    "timestamp": "2024-12-31T17:12:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-26",
+    "resourceType": "system",
+    "resourceId": "res-259",
+    "payload": {
+      "status": "success",
+      "index": 42
+    },
+    "timestamp": "2024-12-31T20:35:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-25",
+    "resourceType": "system",
+    "resourceId": "res-138",
+    "payload": {
+      "status": "success",
+      "index": 43
+    },
+    "timestamp": "not-a-date"
+  },
+  {
+    "eventType": "PERMISSION_GRANTED",
+    "actorId": "actor-11",
+    "resourceType": "system",
+    "resourceId": "res-175",
+    "payload": {
+      "status": "success",
+      "index": 44
+    },
+    "timestamp": "2024-12-31T14:32:00+00:00"
+  },
+  {
+    "eventType": "RECORD_UPDATED",
+    "actorId": "actor-62",
+    "resourceType": "system",
+    "resourceId": "res-253",
+    "payload": {
+      "status": "success",
+      "index": 45
+    },
+    "timestamp": "2024-12-31T11:31:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-33",
+    "resourceType": "system",
+    "resourceId": "res-366",
+    "payload": {
+      "status": "success",
+      "index": 46
+    },
+    "timestamp": "2024-12-31T09:47:00+00:00"
+  },
+  {
+    "eventType": "DATA_ACCESS",
+    "actorId": "actor-44",
+    "resourceType": "system",
+    "resourceId": "res-203",
+    "payload": {},
+    "timestamp": "2024-12-31T08:23:00+00:00"
+  },
+  {
+    "eventType": "DATA_ACCESS",
+    "actorId": "actor-98",
+    "resourceType": "system",
+    "resourceId": "res-456",
+    "payload": {
+      "status": "success",
+      "index": 0
+    },
+    "timestamp": "2024-12-31T16:49:00+00:00"
+  },
+  {
+    "eventType": "USER_LOGIN",
+    "actorId": "actor-89",
+    "resourceType": "system",
+    "resourceId": "res-27",
+    "payload": {
+      "status": "success",
+      "index": 49
+    },
+    "timestamp": "2024-12-31T17:50:00+00:00"
+  }
+]
