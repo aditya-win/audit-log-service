@@ -18,6 +18,7 @@ def override_get_db():
 
 app.dependency_overrides[get_db] = override_get_db
 client = TestClient(app)
+client.headers.update({"X-API-Key": "super-secret-key-123"})
 
 @pytest.fixture(autouse=True)
 def clear_db():
@@ -96,3 +97,20 @@ def test_update_attempt_method_not_allowed():
 def test_delete_attempt_method_not_allowed():
     response = client.delete("/audit/1")
     assert response.status_code == 405
+
+def test_unauthorized_access():
+    unauth_client = TestClient(app)
+    # Missing API Key entirely -> FastAPI returns 403 Forbidden
+    response = unauth_client.get("/audit/verify")
+    assert response.status_code == 403
+    
+    # Wrong API Key -> Our logic returns 401 Unauthorized
+    unauth_client.headers.update({"X-API-Key": "wrong-key"})
+    response = unauth_client.post("/audit", json={
+        "eventType": "USER_LOGIN",
+        "actorId": "hacker",
+        "resourceType": "system",
+        "resourceId": "system",
+        "payload": {}
+    })
+    assert response.status_code == 401

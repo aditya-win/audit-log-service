@@ -1,7 +1,9 @@
 import hashlib
+import hmac
 from typing import Dict, Any
 from datetime import datetime, timezone
 from app.utils.canonical_json import to_canonical_json
+from app.config import settings
 
 GENESIS_HASH = "0" * 64
 
@@ -11,14 +13,15 @@ def compute_payload_commitment(payload_str: str, redacted_fields_str: str = None
     redacted = json.loads(redacted_fields_str) if redacted_fields_str else {}
     
     field_hashes = {}
+    salt_bytes = settings.redaction_salt.encode('utf-8')
     for k, v in payload.items():
         if k in redacted:
             # It's redacted, use the stored hash
             field_hashes[k] = redacted[k]
         else:
-            # It's plaintext, hash its string representation
+            # It's plaintext, hash its string representation using HMAC and our salt
             val_str = str(v)
-            field_hashes[k] = hashlib.sha256(val_str.encode('utf-8')).hexdigest()
+            field_hashes[k] = hmac.new(salt_bytes, val_str.encode('utf-8'), hashlib.sha256).hexdigest()
             
     # Include any redacted fields that were completely removed from payload
     for k, h in redacted.items():

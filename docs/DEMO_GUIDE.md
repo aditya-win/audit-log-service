@@ -27,7 +27,7 @@ python -m scripts.inject_logs --file test_logs.json --url http://127.0.0.1:8000/
 ### 2. Verify the Intact Chain
 **Input (Terminal or Browser):**
 ```cmd
-curl http://127.0.0.1:8000/audit/verify
+curl -H "X-API-Key: super-secret-key-123" http://127.0.0.1:8000/audit/verify
 ```
 **Process:** The server recalculates every hash in the database and compares it to the stored `current_hash`.
 **Output:** `{"status":"INTACT","error":null}`
@@ -55,13 +55,13 @@ We want to redact sensitive data from Record ID #1 without breaking its hash.
 **Input (PowerShell):**
 ```powershell
 # Redact the 'action' field from Record 1
-Invoke-RestMethod -Uri "http://127.0.0.1:8000/audit/1/redact" -Method Post -Body '["action"]' -ContentType "application/json"
+Invoke-RestMethod -Uri "http://127.0.0.1:8000/audit/1/redact" -Method Post -Headers @{"X-API-Key"="super-secret-key-123"} -Body '["action"]' -ContentType "application/json"
 ```
 *(If using `cmd`, you can do this via the Swagger UI at `http://127.0.0.1:8000/docs`)*
 **Process:** The system deletes the `action` value from the payload and stores its individual hash in `redacted_fields`.
 **Output (Run Verification again):** 
 ```cmd
-curl http://127.0.0.1:8000/audit/verify
+curl -H "X-API-Key: super-secret-key-123" http://127.0.0.1:8000/audit/verify
 ```
 -> `{"status":"INTACT","error":null}` (The chain is unbroken despite data removal!)
 

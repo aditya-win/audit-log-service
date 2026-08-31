@@ -1,10 +1,10 @@
 from contextlib import asynccontextmanager
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from app.config import settings
 from app.api.health_routes import router as health_router
 from app.api.audit_routes import router as audit_router
 from app.models.base import Base
-from app.dependencies import engine
+from app.dependencies import engine, verify_api_key
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -25,10 +25,13 @@ def create_app() -> FastAPI:
     # This application currently lacks Authentication and Authorization (e.g., JWT, OAuth2).
     # In production, all routes should be protected by RBAC, ensuring only authorized services can append,
     # and only authorized compliance officers can trigger verifications or exports.
-    # Rate limiting should also be applied to prevent DoS attacks.
-
+    # We are enforcing API Key authentication on all sensitive endpoints
     app.include_router(health_router, prefix=settings.api_prefix)
-    app.include_router(audit_router, prefix=settings.api_prefix)
+    app.include_router(
+        audit_router, 
+        prefix=settings.api_prefix,
+        dependencies=[Depends(verify_api_key)]
+    )
     
     return app
 

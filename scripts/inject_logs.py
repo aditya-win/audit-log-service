@@ -11,12 +11,16 @@ def inject_logs(file_path: str, api_url: str):
     print(f"Found {len(logs)} logs. Injecting into {api_url}...")
     
     success_count = 0
-    with httpx.Client() as client:
+    headers = {"X-API-Key": "super-secret-key-123"}
+    with httpx.Client(headers=headers) as client:
         for i, log in enumerate(logs):
             try:
                 response = client.post(api_url, json=log)
                 if response.status_code == 201:
                     success_count += 1
+                elif response.status_code == 422:
+                    # Intentionally malformed (Scenario MIXED)
+                    pass
                 else:
                     print(f"Failed to inject log {i}: {response.text}")
             except Exception as e:
