@@ -67,8 +67,10 @@ curl -H "X-API-Key: super-secret-key-123" http://127.0.0.1:8000/audit/verify
 
 ### 2. Test Bulk Export
 Export all records related to a specific actor.
-**Input (Browser):**
-Go to `http://127.0.0.1:8000/audit/export/bundle?actorId=system`
+**Input (Terminal):**
+```cmd
+curl -H "X-API-Key: super-secret-key-123" http://127.0.0.1:8000/audit/export/bundle?actorId=user-1
+```
 **Process:** The system extracts all records where `actor_id == system` and bundles them with their cryptographic signatures.
 **Output:** A massive JSON bundle of verified records.
 
