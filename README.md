@@ -97,7 +97,7 @@ python -m scripts.compliance_report --client-id client-123 --format json
 
 ## Security Notes & Limitations
 
-- **Authentication / RBAC**: This implementation currently lacks an authentication layer (e.g., JWT, OAuth2). In a production environment, strict Role-Based Access Control must be applied to ensure only authorized components can append logs and only authorized auditors can trigger verifications.
+- **Authentication / RBAC**: We have secured all endpoints using `X-API-Key` authentication. However, in a full production environment, this should be upgraded to strict Role-Based Access Control (RBAC) (e.g., JWT, OAuth2) to ensure fine-grained resource ownership (e.g., tenant boundaries) and auditor-specific roles.
 - **Hash Collisions**: SHA-256 is currently secure against collision attacks. However, no hash algorithm is permanently immune to advances in cryptanalysis or quantum computing. 
 - **Chain Truncation**: While the hash chain prevents in-place tampering, it cannot inherently prevent a malicious DBA from truncating the database (deleting the last N records). Production systems must anchor the latest `current_hash` to external immutable ledgers or time-stamping authorities periodically to prevent truncation attacks.
 - **Rate Limiting**: The API lacks rate limiting, making it vulnerable to Denial of Service (DoS) attacks designed to exhaust SQLite write locks or storage.

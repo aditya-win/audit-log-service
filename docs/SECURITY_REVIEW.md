@@ -21,10 +21,10 @@ Our architecture securely quarantines the LLM.
 
 ## 4. FastAPI Vulnerabilities
 This prototype deliberately omits several critical layers for a production application:
-- **Authentication/Authorization**: There are no JWTs, RBAC, or API keys implemented. Anyone can append to `/audit` or trigger `/audit/verify`.
+- **Authentication/Authorization**: We have implemented `X-API-Key` authentication to block anonymous access. However, there are no JWTs, fine-grained RBAC, or tenant isolation controls implemented. Any valid API key can access all data.
 - **Rate Limiting**: Without rate limiting, the API is vulnerable to Denial of Service (DoS), easily filling the SQLite database or exhausting the hash chain compute resources.
 - **Input Validation Bounds**: While Pydantic enforces shapes, we haven't strictly bounded the maximum string lengths for payloads to prevent memory exhaustion attacks.
 
 ## 5. SQLite Limitations
-- **Concurrency**: SQLite struggles under high-concurrency writes. A sustained burst of concurrent `POST /audit` requests will cause database locking (`database is locked`) and transient failures.
+- **Concurrency**: We have mitigated concurrent write race conditions by adding a strict `threading.Lock()` around the append process. However, a sustained burst of concurrent `POST /audit` requests under high load may still cause database locking (`database is locked`) and bottleneck performance in a production SQLite setup.
 - **Scale**: As the audit log grows to millions of rows, a single-file SQLite database will degrade in performance. A production system requires a distributed, highly available database (e.g., PostgreSQL).
