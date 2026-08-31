@@ -69,9 +69,9 @@ curl -H "X-API-Key: super-secret-key-123" http://127.0.0.1:8000/audit/verify
 Export all records related to a specific actor.
 **Input (Terminal):**
 ```cmd
-curl -H "X-API-Key: super-secret-key-123" http://127.0.0.1:8000/audit/export/bundle?actorId=user-1
+curl -H "X-API-Key: super-secret-key-123" http://127.0.0.1:8000/audit/export/bundle?actorId=actor-82
 ```
-**Process:** The system extracts all records where `actor_id == system` and bundles them with their cryptographic signatures.
+**Process:** The system extracts all records where `actor_id == actor-82` and bundles them with their cryptographic signatures.
 **Output:** A massive JSON bundle of verified records.
 
 ---
@@ -79,20 +79,20 @@ curl -H "X-API-Key: super-secret-key-123" http://127.0.0.1:8000/audit/export/bun
 ## Scenario C: Compliance Reporting
 
 ### 1. Run the Auditor Script
-An internal auditor needs to see all `DATA_ACCESS` events for client account `client-123`.
+An internal auditor needs to see all `DATA_ACCESS` events for client account `res-216`.
 **Input (Terminal):**
 ```cmd
-python -m scripts.compliance_report --client-id client-123
+python -m scripts.compliance_report --client-id res-216
 ```
 **Process:** The Python script connects directly to the DB, verifies the global hash chain FIRST (to ensure the data is trustworthy), then extracts and groups the specific client's data.
 **Output (Markdown Report):**
 ```markdown
-# Compliance Report: Data Access for Client `client-123`
-**Chain Integrity Status:** `✅ INTACT`
+# Compliance Report: Data Access for Client `res-216`
+**Chain Integrity Status:** `INTACT`
 
-**Total Access Events:** 5
+**Total Access Events:** 1
 
-## Actor: `auditor-john`
-- **Total accesses:** 2
-  - `[2026-08-30T10:00:00]` Event ID: 4 
+## Actor: `actor-82`
+- **Total accesses:** 1
+  - `[2024-12-31T23:59:00]` Event ID: 24 
 ```
