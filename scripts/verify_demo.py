@@ -67,8 +67,12 @@ def run_demo():
         print("ERROR: Tampering was not detected.")
         
     session.close()
+    engine.dispose()
     if os.path.exists(db_file):
-        os.remove(db_file)
+        try:
+            os.remove(db_file)
+        except Exception:
+            pass
 
 if __name__ == "__main__":
     run_demo()
